@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da3e280-dd3f-4527-9eb1-83820d21418a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/ConfigurationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/model/Mod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/model/ModVersion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/model/Version.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/repository/ModRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/leolo/factorio/resolver/model/VersionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/leolo/factorio/resolver/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +47,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.VersionTest">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.leolo.factorio.resolver.MainApp" />
       <module name="Factorio Resolve" />
@@ -60,8 +68,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VersionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factorio Resolve" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.leolo.factorio.resolver.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.leolo.factorio.resolver.model" />
+      <option name="MAIN_CLASS_NAME" value="org.leolo.factorio.resolver.model.VersionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VersionTest.basicParsingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factorio Resolve" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.leolo.factorio.resolver.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.leolo.factorio.resolver.model" />
+      <option name="MAIN_CLASS_NAME" value="org.leolo.factorio.resolver.model.VersionTest" />
+      <option name="METHOD_NAME" value="basicParsingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VersionTest.specialNumberFmt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factorio Resolve" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.leolo.factorio.resolver.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.leolo.factorio.resolver.model" />
+      <option name="MAIN_CLASS_NAME" value="org.leolo.factorio.resolver.model.VersionTest" />
+      <option name="METHOD_NAME" value="specialNumberFmt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VersionTest" />
+        <item itemvalue="JUnit.VersionTest.specialNumberFmt" />
+        <item itemvalue="JUnit.VersionTest.basicParsingTest" />
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.MainApp" />
       </list>
     </recent_temporary>
@@ -74,7 +140,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683485459882</updated>
-      <workItem from="1683485462272" duration="1009000" />
+      <workItem from="1683485462272" duration="3876000" />
+      <workItem from="1683525947670" duration="5553000" />
     </task>
     <servers />
   </component>

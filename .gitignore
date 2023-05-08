@@ -37,5 +37,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-main/resources/config.properties
 src/main/resources/config.properties
+/output
